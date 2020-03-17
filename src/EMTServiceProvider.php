@@ -2,6 +2,7 @@
 
 namespace saurovsergey\EMT;
 
+use saurovsergey\EMT\Facades\EMT;
 use Illuminate\Support\ServiceProvider;
 
 class EMTServiceProvider extends ServiceProvider
@@ -35,7 +36,7 @@ class EMTServiceProvider extends ServiceProvider
 
         // Register the service the package provides.
         $this->app->singleton('emt', function ($app) {
-            return new EMT;
+            return new EMT();
         });
     }
 
